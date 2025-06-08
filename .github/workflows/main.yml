@@ -40,7 +40,7 @@ jobs:
       - name: Add CNAME file to dist
         run: echo 'emmanueljaimes.com' > dist/CNAME
 
-      - name: Add .nojekyll fiel
+      - name: Add .nojekyll file
         run: touch dist/.nojekyll
 
       - name: Setup Pages
