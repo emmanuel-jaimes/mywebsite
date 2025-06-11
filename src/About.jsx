@@ -1,6 +1,7 @@
 import React from 'react';
 import RecentlyPlayed from './RecentlyPlayed';
 import Typewriter from './Typewriter';
+import Card from './Card';
 
 const sampleSongs = [
   {
@@ -34,27 +35,29 @@ function About() {
   return (
     <div className="text-left text-3xl"> 
       <Typewriter
-                    size=""
-                    words={[
-                        "Howdy, I'm a...",
-                      "Software Engineer",
-                      "University of Iowa Graduate",
-                      "Dallas Native",
-                      "Craft Bartender",
-                      "Music Enthusiast",
-                      "Intramural Futsal Champion",
-                    ]}
-                  />
+            size=""
+            words={[
+                "Howdy, I'm a...",
+              "Software Engineer",
+              "University of Iowa Graduate",
+              "Dallas Native",
+              "Craft Bartender",
+              "Music Enthusiast",
+              "Intramural Futsal Champion",
+            ]}
+        />
         <div className="text-base px-4 py-6 space-y-6 text-left">
-                        
-        <div className="leading-relaxed">
-            <p>
-            Whether it's solving complex problems or crafting beautiful solutions, I bridge curiosity, precision, and a hunger to keep learning. 
-            <br />
-            Oh—and can make <i>pretty mean</i> margaritas too. 🍸
-            </p>
+
+            <div className="leading-relaxed">
+                <p>
+                Whether it's solving complex problems or crafting beautiful solutions, I bridge curiosity, precision, and a hunger to keep learning. 
+                <br />
+                Oh—and can make <i>pretty mean</i> margaritas too. 🍸
+                </p>
+            </div>
         </div>
 
+        <Card title={"Theme Music"}>
             <div className="space-y-4 flex flex-col">
                 <p className="font-semibold">
                     Every project deserves a theme song. Here’s my frequently played.
@@ -63,8 +66,7 @@ function About() {
                     <RecentlyPlayed songs={sampleSongs} />
                 </div>
             </div>
-
-        </div>
+        </Card>
     </div>
   );
 }
