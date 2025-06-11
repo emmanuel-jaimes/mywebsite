@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Hero from './Hero'
 import Switch from './Switch'
+import { Analytics } from '@vercel/analytics/react'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <div>
       <Hero/>
       <Switch/>
+      <Analytics mode='production'/>
     </div>
   )
 }
