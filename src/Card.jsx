@@ -9,7 +9,7 @@ function Card({ title, children }) {
             {title}
           </h2>
         )}
-        <div className="text-white text-base md:text-lg leading-relaxed w-3xl">
+        <div className="text-white text-base md:text-lg leading-relaxed">
           {children}
         </div>
       </div>

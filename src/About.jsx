@@ -1,5 +1,5 @@
 import React from 'react';
-import RecentlyPlayed from './RecentlyPlayed';
+import IconCarousel from './IconCarousel';
 import Typewriter from './Typewriter';
 import Card from './Card';
 import { title } from 'framer-motion/client';
@@ -35,67 +35,84 @@ const sampleSongs = [
 const techStack = [
   {
     // title: "Java",
-    albumArt: "/java.svg"
+    albumArt: "/java.svg",
+    description: "Java"
   },
   {
   //  title: "JavaScript",
-   albumArt: "/javascript.svg"
-  },
-  {
-  //  title: "python",
-   albumArt: "/python.svg"
+   albumArt: "/javascript.svg",
+   description: "JavaScript"
   },
   {
   //  title: "C++",
-   albumArt: "/c.svg"
+   albumArt: "/c.svg",
+   description: "C++"
   },
   {
-    albumArt: "/csharp.svg"
+    albumArt: "/csharp.svg",
+    description: "C Sharp"
   },
   {
-    albumArt: "/html.svg"
+  //  title: "python",
+   albumArt: "/python.svg",
+   description: "Python"
   },
   {
-    albumArt: "/css.svg"
+    albumArt: "/html.svg",
+    description: "HTML"
   },
   {
-    albumArt: "/haskell.svg"
+    albumArt: "/css.svg",
+    description: "CSS"
+  },
+  {
+    albumArt: "/haskell.svg",
+    description: "Haskell"
   },
 ]
 const frameworks = [
   {
-    albumArt: "/react.svg"
+    albumArt: "/react.svg",
+    description: "React"
   },
   {
-    albumArt: "/typescript.svg"
+    albumArt: "/typescript.svg",
+    description: "TypeScript"
   },
   {
-    albumArt: "vite.svg"
+    albumArt: "vite.svg",
+    description: "Vite"
   },
   {
-    albumArt: "/expo.svg"
+    albumArt: "/expo.svg",
+    description: "Expo"
   },
   {
-    albumArt: "/node-js.svg"
+    albumArt: "/node-js.svg",
+    description: "Node.js"
   },
   {
-    albumArt: "/tailwindcss.svg"
+    albumArt: "/tailwindcss.svg",
+    description: "Tailwind CSS"
   },
   {
-    albumArt: "/firebase.svg"
+    albumArt: "/firebase.svg",
+    description: "Firebase"
   },
   {
-    albumArt: "/php.svg"
+    albumArt: "/php.svg",
+    description: "PHP",
   },
   {
-    albumArt: "/qt.svg"
+    albumArt: "/qt.svg",
+    description: 'QT'
   }
 
 ]
 
 function About() {
   return (
-    <div className="text-left text-3xl"> 
+    <div className="text-left text-3xl justify-center"> 
 
         <Card>
             <p className='text-2xl font-bold'>Howdy</p>
@@ -111,9 +128,9 @@ function About() {
         <Card>
           <p className='text-2xl font-bold'>Current Tech Stack</p>
           <div className='space-y-4 flex flex-col'>
-            <RecentlyPlayed songs={techStack} color={'gray'}/>
-          <p className='text-xl'>Frameworks</p>
-            <RecentlyPlayed songs={frameworks}/>
+            <IconCarousel songs={techStack} size={'84'}/>
+          <Typewriter words={["Frameworks & Tools"]} pause={4500}/>
+            <IconCarousel songs={frameworks} size={'84'}/>
           </div>
         </Card>
 
@@ -122,7 +139,7 @@ function About() {
               <p className='font-semibold'>Something on my rotation</p>
             </div>
             <div className='items-center justify-center text-center overflow-scroll'>
-              <RecentlyPlayed songs={sampleSongs}/>
+              <IconCarousel songs={sampleSongs} size={'96'}/>
             </div>
         </Card>
 

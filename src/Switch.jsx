@@ -3,16 +3,14 @@ import Card from './Card';
 import { motion, AnimatePresence } from 'framer-motion';
 import Experience from './Experience';
 import About from './About';
+import Projects from './Projects';
 
 const sections = {
   'About Me': (
     <About/>
   ),
   Projects: (
-    <ul className="list-disc pl-4">
-      <li>Digital Smart Thermometer</li>
-      <li>Typing Speed App</li>
-    </ul>
+    <Projects/>
   ),
   Experience: (
     <Experience/>
@@ -20,7 +18,7 @@ const sections = {
 };
 
 function Switch() {
-  const [activeTab, setActiveTab] = useState('About Me');
+  const [activeTab, setActiveTab] = useState('About Me'); //todo About me default tab   
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center pt-10 transition-all duration-500">
