@@ -1,64 +1,72 @@
-import React from 'react'
-import Card from './Card'
-import SocialIcon from './SocialIcon'
+import React from 'react';
+import SocialIcon from './SocialIcon';
 
 function Projects() {
   return (
-    <div>
+    <div className="max-w-6xl mx-auto px-4 py-12 space-y-8">
 
-      <Card title={"Smart Home Thermometer System"} description={""}>
-        <div className="border-b-white border-2 rounded-2xl p-4 m-2 text-center">
-          <div className="flex justify-center items-center">
-            <SocialIcon
-              href="https://github.com/emmanuel-jaimes/iot"
-              alt="Github Link"
-              src="/Github.svg"
-              hoverColor="hover:bg-purple-800"
-            />
-          </div>
+      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white text-center">
+        <h2 className="text-2xl font-semibold mb-2">Smart Home Thermostat System</h2>
+        <p className="mb-4">
+          Designed and implemented an IoT Thermostat System using microcontrollers and a controllable web interface.
+        </p>
+        <div className="flex justify-center">
+          <SocialIcon
+            href="https://github.com/emmanuel-jaimes/iot"
+            alt="Github Link"
+            src="/Github.svg"
+            hoverColor="hover:bg-purple-800"
+          />
         </div>
-      </Card>
+      </div>
 
-      <Card title={"Typing Analyzer"} description={"Typing performance analyzer built with React and Firebase"}>
-        <div className="border-b-white border-2 rounded-2xl p-4 m-2 text-center">
-          <div className="flex justify-center items-center">
-            <SocialIcon
-              href="https://github.com/emmanuel-jaimes/typingtyper"
-              alt="Github Link"
-              src="/Github.svg"
-              hoverColor="hover:bg-purple-800"
-            />
-          </div>
+      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white text-center">
+        <h2 className="text-2xl font-semibold mb-2">Typing Analyzer</h2>
+        <p className="mb-4">
+          Developed a bilingual typing analyzer app that tracks and visualizes user performance.
+        </p>
+        <div className="flex justify-center">
+          <SocialIcon
+            href="https://github.com/emmanuel-jaimes/typingtyper"
+            alt="Github Link"
+            src="/Github.svg"
+            hoverColor="hover:bg-purple-800"
+          />
         </div>
-      </Card>
+      </div>
 
-      <Card title={"Album Art Extractor"} description={"Tool to extract and display Spotify album art from links."}>
-        <div className="border-b-white border-2 rounded-2xl p-4 m-2 text-center">
-          <div className="flex justify-center items-center">
-            <SocialIcon
-              href="https://github.com/emmanuel-jaimes/muse"
-              src="/Github.svg"
-              hoverColor="hover:bg-purple-800"
-            />
-          </div>
+      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white text-center">
+        <h2 className="text-2xl font-semibold mb-2">Album Art Extractor</h2>
+        <p className="mb-4">
+          A web tool that extracts and displays the main color palette of any Spotify album art.
+        </p>
+        <div className="flex justify-center">
+          <SocialIcon
+            href="https://github.com/emmanuel-jaimes/muse"
+            alt="Github Link"
+            src="/Github.svg"
+            hoverColor="hover:bg-purple-800"
+          />
         </div>
-      </Card>
+      </div>
 
-      <Card title={"Network Protocol Simulator"} description={"Simulates network protocols using linked lists."}>
-        <div className="border-b-white border-2 rounded-2xl p-4 m-2 text-center">
-          <div className="flex justify-center items-center">
-            <SocialIcon
-              href="https://github.com/emmanuel-jaimes/uni-projects/tree/main/LinkedListNetwork"
-              alt="Github Link"
-              src="/Github.svg"
-              hoverColor="hover:bg-purple-800"
-            />
-          </div>
+      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white text-center">
+        <h2 className="text-2xl font-semibold mb-2">Network Protocol Simulator</h2>
+        <p className="mb-4">
+          Simulates various networking protocols in a command-line environment using data structures.
+        </p>
+        <div className="flex justify-center">
+          <SocialIcon
+            href="https://github.com/emmanuel-jaimes/uni-projects/tree/main/LinkedListNetwork"
+            alt="Github Link"
+            src="/Github.svg"
+            hoverColor="hover:bg-purple-800"
+          />
         </div>
-      </Card>
-
+      </div>
+      
     </div>
-  )
+  );
 }
 
-export default Projects
+export default Projects;
