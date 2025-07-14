@@ -36,15 +36,14 @@ const frameworks = [
 
 function About() {
   return (
-    <div className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+    <div className="md:max-w-4xl mx-auto px-4 py-8 space-y-10">
       
       {/* Intro */}
       <Card>
         <div className="text-white text-center space-y-4">
-          <p className="text-4xl font-bold">Howdy</p>
-          <p className="text-lg leading-relaxed max-w-3xl mx-auto">
-            Whether it's solving complex problems or crafting beautiful solutions, I bridge curiosity, precision, and a hunger to keep learning. <br />
-            Oh—and I can make <i>pretty mean</i> margaritas too. 🍸
+          <p className="text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
+            Whether it's solving complex problems or crafting beautiful solutions, I bridge curiosity and precision with a hunger to keep learning. <br />
+            Writing lines of code by day, and making <i>mean</i> margaritas by night 🍸
           </p>
         </div>
       </Card>
@@ -52,20 +51,31 @@ function About() {
       {/* Tech Stack */}
       <Card>
         <div className="text-white text-center space-y-6">
-          <p className="text-3xl font-semibold">Current Tech Stack</p>
-          <IconCarousel songs={techStack} size={72} />
-          <Typewriter words={["Frameworks & Tools"]} pause={4500} />
-          <IconCarousel songs={frameworks} size={72} />
+          <p className="text-2xl sm:text-3xl font-semibold">Current Tech Stack</p>
+          <Typewriter words={["Languages, Frameworks & Tools"]} pause={4500} />
+          
+          {/* Icons with responsive spacing */}
+          <div className="overflow-x-auto flex justify-center">
+            <IconCarousel songs={techStack} size={64} />
+          </div>
+
+          <div className="overflow-x-auto flex justify-center">
+            <IconCarousel songs={frameworks} size={64} />
+          </div>
         </div>
       </Card>
 
       {/* Music Section */}
       <Card>
         <div className="text-white text-center space-y-4">
-          <p className="text-3xl font-semibold">Theme Music 🎧</p>
-          <p className="text-sm text-gray-400 italic">Something from my current rotation:</p>
-          <div className="max-w-full overflow-x-auto">
-            <IconCarousel songs={sampleSongs} size={96} />
+          <p className="text-2xl sm:text-3xl font-semibold">Theme Music 🎧</p>
+          <p className="text-sm text-gray-400 italic">
+            Can't go without mentioning a bit of enrichment through music
+          </p>
+
+          {/* Scrollable and centered carousel */}
+          <div className="overflow-x-auto flex justify-center">
+            <IconCarousel songs={sampleSongs} size={88} />
           </div>
         </div>
       </Card>

@@ -29,9 +29,9 @@ function Typewriter({ words, speed = 100, pause = 1500 }) {
   }, [subIndex, index, reverse, words, speed, pause]);
 
   return (
-    <span className="whitespace-pre">
+    <span className="whitespace-pre text-gray-400">
       {words[index].substring(0, subIndex)}
-      <span className="animate-pulse text-white">|</span>
+      <span className="animate-pulse">|</span>
     </span>
   );
 }

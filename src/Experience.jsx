@@ -40,7 +40,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <div className="flex flex-col px-4 py-4 relative">
+    <div className="flex flex-col max-w-6xl px-4 py-4 relative">
       {/* timeline full */}
       <div className="absolute left-1/2 transform -translate-x-1/2 top-5 bottom-32 w-1 rounded-full bg-white z-0" />
 

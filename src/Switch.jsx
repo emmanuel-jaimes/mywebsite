@@ -6,7 +6,7 @@ import About from './About';
 import Projects from './Projects';
 
 const sections = {
-  'About Me': (
+  'Howdy': (
     <About/>
   ),
   Projects: (
@@ -18,7 +18,7 @@ const sections = {
 };
 
 function Switch() {
-  const [activeTab, setActiveTab] = useState('About Me'); //todo About me default tab   
+  const [activeTab, setActiveTab] = useState('Howdy'); //todo About me default tab   
 
   return (
     <div className="min-h-screen bg-black flex flex-col items-center pt-10 transition-all duration-500">
