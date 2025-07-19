@@ -31,10 +31,10 @@ const experiences = [
   },
   {
     year: "19' - 24'",
-    company: "Various Locations",
+    company: "Various Establishments",
     title: "Craft Cocktail Bartender",
     location: "Dallas, TX",
-    logo: "/imgs/martini-glass.png",
+    logo: "/martini-glass.png",
   },
 ];
 
@@ -54,15 +54,15 @@ function Experience() {
             <div className="flex flex-col items-end lg:items-start justify-self-start lg:justify-self-end z-10">
               <div className="text-xl text-gray-300 italic mb-2">{exp.year}</div>
               {(idx === 1) && (
-                <div className="bg-gray-50 text-black rounded-xl shadow-md p-5 md:w-76">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white md:w-76">
                   <div className="flex items-center mb-2 gap-2 justify-evenly">
                     {exp.logo && (
                       <img src={exp.logo} alt="" className="w-16 h-16 object-contain rounded" />
                     )}
-                    <h3 className="text-lg font-medium">{exp.company}</h3>
+                    <h3 className="text-lg font-medium text-gray-300">{exp.company}</h3>
                   </div>
                   <p className="text-lg font-bold">{exp.title}</p>
-                  <p className="italic mb-1">{exp.location}</p>
+                  <p className="italic mb-1 text-gray-300">{exp.location}</p>
                 </div>
               )}
             </div>
@@ -75,15 +75,15 @@ function Experience() {
             {/* RIGHT SIDE (Card or Year) */}
             <div className="flex flex-col items-start justify-self-start z-10">
               {idx !== 1 && (
-                <div className="bg-gray-50 text-black rounded-xl shadow-md p-5 md:w-76">
+                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white md:w-76">
                   <div className="flex items-center mb-2 gap-2 justify-evenly">
                     {exp.logo && (
                       <img src={exp.logo} alt="" className="w-16 h-16 object-contain rounded" />
                     )}
-                    <h3 className="text-lg font-medium">{exp.company}</h3>
+                    <h3 className="text-lg font-medium text-gray-300">{exp.company}</h3>
                   </div>
                   <p className="text-lg font-bold">{exp.title}</p>
-                  <p className="italic mb-1">{exp.location}</p>
+                  <p className="italic mb-1 text-gray-300">{exp.location}</p>
                 </div>
               )}
             </div>

@@ -64,7 +64,11 @@ function Projects() {
           />
         </div>
       </div>
-      
+
+      <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white text-center">
+        <h2 className="text-2xl font-semibold mb-2">More under development...</h2>
+      </div>
+
     </div>
   );
 }

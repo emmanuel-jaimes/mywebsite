@@ -56,11 +56,11 @@ function About() {
           
           {/* Icons with responsive spacing */}
           <div className="overflow-x-auto flex justify-center">
-            <IconCarousel songs={techStack} size={64} />
+            <IconCarousel songs={techStack} size={96} />
           </div>
 
           <div className="overflow-x-auto flex justify-center">
-            <IconCarousel songs={frameworks} size={64} />
+            <IconCarousel songs={frameworks} size={96} />
           </div>
         </div>
       </Card>
