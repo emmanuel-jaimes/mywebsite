@@ -1,19 +1,17 @@
 import React from "react";
 import SocialIcon from "./SocialIcon";
-import Typewriter from "./Typewriter";
 
 export default function Hero() {
   return (
     <div className="bg-black text-white tracking-widest font-roboto p-6">
       <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
-        {/* Left: Name + Typewriter */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-2">Emmanuel Jaimes</h1>
           <h2 className="text-2xl md:text-3xl mb-1">Software Engineer</h2>
           <h2 className="text-2xl md:text-2xl"><i>📍Chicago</i></h2>   
         </div>
 
-        {/* Right: Social Icons */}
+        {/* right social icon */}
         <div className="grid grid-cols-2 md:flex justify-center md:justify-end gap-6">
           <SocialIcon
             href="https://www.linkedin.com/in/jaimes-emmanuel"

@@ -1,8 +1,9 @@
-import React from 'react';
+import React from "react";
+import DateCard from "./DateCard";
 
 const experiences = [
   {
-    year: "Present",
+    year: "24' - Present",
     company: "Northwestern Medicine",
     title: "Technology Support Analyst",
     location: "Chicago, IL",
@@ -40,56 +41,49 @@ const experiences = [
 
 function Experience() {
   return (
-    <div className="flex flex-col max-w-6xl px-4 py-4 relative">
-      {/* timeline full */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-5 bottom-32 w-1 rounded-full bg-white z-0" />
+    <div className="relative max-w-6xl mx-auto px-4 py-8">
+      {/* Timeline line */}
+      <div className="absolute left-1/2 transform -translate-x-1/2 top-6 bottom-24 w-1 bg-white/40 rounded-full" />
 
-      {experiences.map((exp, idx) => {
-        return (
-          <div
-            key={idx}
-            className="grid lg:grid-cols-[1fr_40px_1fr] items-start gap-4 relative mb-12"
-          >
-            {/* LEFT SIDE (Year or Card) */}
-            <div className="flex flex-col items-end lg:items-start justify-self-start lg:justify-self-end z-10">
-              <div className="text-xl text-gray-300 italic mb-2">{exp.year}</div>
-              {(idx === 1) && (
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white md:w-76">
-                  <div className="flex items-center mb-2 gap-2 justify-evenly">
-                    {exp.logo && (
-                      <img src={exp.logo} alt="" className="w-16 h-16 object-contain rounded" />
-                    )}
-                    <h3 className="text-lg font-medium text-gray-300">{exp.company}</h3>
-                  </div>
-                  <p className="text-lg font-bold">{exp.title}</p>
-                  <p className="italic mb-1 text-gray-300">{exp.location}</p>
-                </div>
-              )}
-            </div>
+      <div className="flex flex-col gap-12">
+        {experiences.map((exp, idx) => {
+          const isLeft = idx % 2 === 0;
 
-            {/* MIDDLE Timeline Marker */}
-            <div className="relative flex flex-col items-center z-10">
-              <div className="w-3 h-3 bg-blue-500 rounded-full" />
-            </div>
+          return (
+            <div
+              key={idx}
+              className="grid lg:grid-cols-[1fr_40px_1fr] items-start relative"
+            >
+              {/* Left */}
+              <div className="flex justify-end">
+                {isLeft && (
+                  <DateCard
+                    {...exp}
+                    align="left"
+                    hoverClass="hover:bg-blue-500/20"
+                  />
+                )}
+              </div>
 
-            {/* RIGHT SIDE (Card or Year) */}
-            <div className="flex flex-col items-start justify-self-start z-10">
-              {idx !== 1 && (
-                <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl shadow-md text-white md:w-76">
-                  <div className="flex items-center mb-2 gap-2 justify-evenly">
-                    {exp.logo && (
-                      <img src={exp.logo} alt="" className="w-16 h-16 object-contain rounded" />
-                    )}
-                    <h3 className="text-lg font-medium text-gray-300">{exp.company}</h3>
-                  </div>
-                  <p className="text-lg font-bold">{exp.title}</p>
-                  <p className="italic mb-1 text-gray-300">{exp.location}</p>
-                </div>
-              )}
+              {/* Marker */}
+              <div className="flex justify-center items-start relative z-10">
+                <div className="w-3 h-3 bg-blue-500 rounded-full mt-4" />
+              </div>
+
+              {/* Right */}
+              <div className="flex justify-end">
+                {!isLeft && (
+                  <DateCard
+                    {...exp}
+                    align="right"
+                    hoverClass="hover:bg-purple-500/20"
+                  />
+                )}
+              </div>
             </div>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </div>
   );
 }

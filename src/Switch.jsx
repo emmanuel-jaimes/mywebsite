@@ -6,30 +6,27 @@ import About from './About';
 import Projects from './Projects';
 
 const sections = {
-  'Howdy': (
-    <About/>
-  ),
-  Projects: (
-    <Projects/>
-  ),
-  Experience: (
-    <Experience/>
-  ),
+  'Howdy': <About />,
+  Projects: <Projects />,
+  Experience: <Experience />,
 };
 
 function Switch() {
-  const [activeTab, setActiveTab] = useState('Howdy'); //todo About me default tab   
+  const [activeTab, setActiveTab] = useState('Howdy');
 
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center pt-10 transition-all duration-500">
-      {/* Navigation Menu */}
-      <div className="flex gap-4 mb-6">
+    <div className="min-h-screen w-full bg-black flex flex-col items-center pt-10 transition-all duration-500 px-4">
+      
+      {/* nav menu */}
+      <div className="flex flex-wrap justify-center gap-4 mb-8">
         {Object.keys(sections).map((tab) => (
           <button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            className={`px-4 py-2 rounded-lg font-medium transition ${
-              activeTab === tab ? 'bg-blue-500 text-blue-800' : 'bg-white text-gray-800'
+            className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${
+              activeTab === tab 
+                ? 'bg-blue-600 text-white shadow-lg shadow-blue-900/20' 
+                : 'bg-zinc-800 text-gray-400 hover:text-white hover:bg-zinc-700'
             }`}
           >
             {tab}
@@ -37,18 +34,21 @@ function Switch() {
         ))}
       </div>
 
-      {/* Animated Card Content */}
+      {/* animate */}
       <AnimatePresence mode="wait">
         <motion.div
           key={activeTab}
-          initial={{ opacity: 0, scale: 0.95, y: 20 }}
+          initial={{ opacity: 0, scale: 0.98, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.95, y: -20 }}
-          transition={{ duration: 0.3, ease: 'easeInOut' }}
+          exit={{ opacity: 0, scale: 0.98, y: -10 }}
+          transition={{ duration: 0.3, ease: 'easeOut' }}
+          className="w-full flex justify-center"
         >
-          <Card title={activeTab}>
-            {sections[activeTab]}
-          </Card>
+          <div className="w-full max-w-4xl"> 
+            <Card title={activeTab} hoverable={false} hoverClass='hover:bg-black'>
+              {sections[activeTab]}
+            </Card>
+          </div>
         </motion.div>
       </AnimatePresence>
     </div>
