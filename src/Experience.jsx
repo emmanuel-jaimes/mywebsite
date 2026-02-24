@@ -3,7 +3,7 @@ import DateCard from "./DateCard";
 
 const experiences = [
   {
-    year: "24' - Present",
+    year: "25' - Present",
     company: "Northwestern Medicine",
     title: "Technology Support Analyst",
     location: "Chicago, IL",
@@ -41,7 +41,7 @@ const experiences = [
 
 function Experience() {
   return (
-    <div className="relative max-w-6xl mx-auto px-4 py-8">
+    <div className="relative max-w-3xl mx-auto px-4 py-8">
       {/* Timeline line */}
       <div className="absolute left-1/2 transform -translate-x-1/2 top-6 bottom-24 w-1 bg-white/40 rounded-full" />
 

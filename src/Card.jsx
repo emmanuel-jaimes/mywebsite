@@ -5,7 +5,8 @@ function Card({
   description,
   children,
   hoverable = true,
-  hoverClass = "hover:bg-white/10"
+  hoverClass = "hover:bg-white/10",
+  childrenClass = "w-full"
 }) {
   return (
     <div
@@ -43,7 +44,7 @@ function Card({
       )}
 
       {children && (
-        <div className="flex justify-center w-full overflow-hidden">
+        <div className={childrenClass}>
           {children}
         </div>
       )}

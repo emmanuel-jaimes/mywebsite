@@ -1,26 +1,25 @@
 import React from "react";
 
-function IconCarousel({ songs, size = 96 }) {
+function IconCarousel({ songs, size = 80 }) {
   return (
     <div
       className="
         relative
-        w-full
-        max-w-full
-        overflow-x-scroll
-        overflow-y-hidden
-        py-4
+        py-3
         scroll-smooth
+        overflow-x-auto
+        snap-x snap-mandatory
+        no-scrollbar
       "
       aria-label="Scrollable icon carousel"
     >
-      {/* scroll */}
       <div
         className="
+          gap-4
+          px-4
           flex
-          gap-6
-          px-6
           min-w-max
+          mx-auto
           justify-center
         "
       >
@@ -28,43 +27,19 @@ function IconCarousel({ songs, size = 96 }) {
           <div
             key={index}
             className="
-              flex-shrink-0
+              group
+              shrink-0
               snap-center
               text-center
               relative
-              group
               transition-transform
               duration-300
-              hover:-translate-y-3
+              active:scale-95
+              sm:hover:-translate-y-2
             "
             style={{ width: size }}
           >
-            {/* Tooltip */}
-            {song.description && (
-              <div
-                className="
-                  hidden sm:block
-                  absolute
-                  -bottom-1
-                  left-1/2
-                  -translate-x-1/2
-                  px-2
-                  text-xs
-                  text-white
-                  bg-black/80
-                  rounded
-                  opacity-0
-                  group-hover:opacity-100
-                  transition-opacity
-                  whitespace-nowrap
-                  z-20
-                "
-              >
-                {song.description}
-              </div>
-            )}
-
-            {/* glow */}
+            {/* Glow (hover only on larger screens) */}
             <div
               className="
                 absolute
@@ -76,33 +51,39 @@ function IconCarousel({ songs, size = 96 }) {
                 scale-90
                 transition-opacity
                 duration-300
-                group-hover:opacity-10
+                sm:group-hover:opacity-10
                 z-0
               "
             />
 
-            {/* img */}
             <img
               src={song.albumArt}
               alt={song.title || song.description}
               style={{ width: size, height: size }}
-              className="rounded-lg mb-2 relative z-10"
+              className="
+                rounded-lg
+                mb-2
+                relative
+                z-10
+                object-cover
+              "
             />
 
-            {/* txt */}
             {song.title && (
-              <p className="text-white text-sm leading-tight">
+              <p className="text-white text-xs sm:text-sm leading-tight truncate">
                 {song.title}
               </p>
             )}
+
             {song.artist && (
-              <p className="text-gray-500 text-xs leading-tight">
+              <p className="text-gray-500 text-[11px] sm:text-xs leading-tight truncate">
                 {song.artist}
               </p>
             )}
           </div>
         ))}
       </div>
+
     </div>
   );
 }

@@ -5,7 +5,6 @@ import './App.css'
 import Hero from './Hero'
 import Switch from './Switch'
 import { Analytics } from '@vercel/analytics/react'
-
 function App() {
 
   return (

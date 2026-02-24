@@ -15,6 +15,7 @@ const techStack = [
   { albumArt: "/javascript.svg", description: "JavaScript" },
   { albumArt: "/c.svg", description: "C++" },
   { albumArt: "/csharp.svg", description: "C Sharp" },
+  { albumArt: "/sql.svg", description: "SQL" },
 ];
 const techStack2 = [
   { albumArt: "/python.svg", description: "Python" },
@@ -26,7 +27,7 @@ const techStack2 = [
 const frameworks = [
   { albumArt: "/react.svg", description: "React" },
   { albumArt: "/typescript.svg", description: "TypeScript" },
-  { albumArt: "vite.svg", description: "Vite" },
+  { albumArt: "/vite.svg", description: "Vite" },
   { albumArt: "/expo.svg", description: "Expo" },
 ];
 const frameworks2 = [
@@ -39,7 +40,7 @@ const frameworks2 = [
 
 function About() {
   return (
-    <div className="md:max-w-4xl mx-auto px-4 py-8 space-y-10">
+    <div className="max-w-3xl mx-auto px-4 py-8 space-y-10">
       
       <Card>
         <div className="text-white text-center space-y-4">
@@ -54,20 +55,27 @@ function About() {
         <div className="text-white text-center space-y-2">
           <p className="text-2xl sm:text-3xl font-semibold">Current Tech Stack</p>
           <p className="text-sm text-gray-400 italic">Languages, Tools & Frameworks</p>
-            <IconCarousel songs={[...techStack, ...techStack2]} size={72} />
-            <IconCarousel songs={[...frameworks, ...frameworks2]} size={72} />
+          <div className='w-full overflow-x-auto'>
+              <IconCarousel songs={[...techStack, ...techStack2]} size={72} />
+          </div>
+          <div className='w-full overflow-x-auto'>
+              <IconCarousel songs={[...frameworks, ...frameworks2]} size={72} />
+          </div>
         </div>
       </Card>
 
       <Card>
         <div className="text-white text-center space-y-4">
-          <p className="text-2xl sm:text-3xl font-semibold">Theme Music 🎧</p>
+          <p className="text-2xl sm:text-3xl font-semibold">Theme Music</p>
           <p className="text-sm text-gray-400 italic">
             Can't go without mentioning a bit of enrichment
           </p>
-            <IconCarousel songs={sampleSongs} size={88} />
+          <div className='w-full overflow-x-auto'>
+              <IconCarousel songs={sampleSongs} size={88} />
+          </div>
         </div>
       </Card>
+
     </div>
   );
 }
