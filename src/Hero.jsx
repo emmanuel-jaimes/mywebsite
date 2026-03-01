@@ -32,7 +32,7 @@ export default function Hero() {
             hoverColor="hover:bg-green-800"
           />
           <SocialIcon
-            href="/info/emmanuelJaimes_Resume.pdf"
+            href="https://github.com/emmanuel-jaimes/uni-projects/blob/main/emmanuelJaimes_%20Resume26.pdf"
             src="/File_text.svg"
             alt="Resume"
             hoverColor="hover:bg-yellow-800"
