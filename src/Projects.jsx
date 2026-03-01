@@ -54,6 +54,21 @@ function Projects() {
       </Card>
 
       <Card
+        title="Base Conversion Calculator v1.0.0"
+        description="A native application that can calculate conversions between any designated bases."
+      >
+        <div className='flex justify-center w-full'>
+          <SocialIcon
+            className='mx-auto'
+            href="https://github.com/emmanuel-jaimes/uni-projects/tree/main/BaseConversionGUI"
+            alt="Github Link"
+            src="/Github.svg"
+            hoverColor="hover:bg-purple-800"
+          />
+        </div>
+      </Card>
+
+      <Card
         title="Network Protocol Simulator"
         description="Simulates various networking protocols in a command-line environment using data structures."
       >
