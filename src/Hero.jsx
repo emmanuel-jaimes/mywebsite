@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-0">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <h1 className="text-4xl md:text-5xl font-bold mb-2">Emmanuel Jaimes</h1>
-          <h2 className="text-2xl md:text-3xl mb-1">Software Engineer</h2>
+          <h2 className="text-2xl md:text-3xl mb-1">Engineer</h2>
           <h2 className="text-2xl md:text-2xl"><i>📍Chicago</i></h2>   
         </div>
 
