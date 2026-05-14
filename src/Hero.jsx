@@ -18,18 +18,18 @@ export default function Hero() {
   ];
 
   return (
-    <div className="bg-white text-gray-800 dark:bg-neutral-950 relative isolate min-h-screen antialiased dark:text-neutral-100">
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="h-[60vh] w-[60vh] rounded-full bg-gradient-to-br absolute -top-32 -left-32 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
-        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-160 right-10 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0"></div>
-        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute top-28 left-1/4 from-orange-300 via-amber-200 to-rose-100 opacity-60 blur-3xl dark:from-orange-600 dark:via-amber-500 dark:to-rose-400 dark:opacity-64"></div>
+    <div className="bg-white text-gray-800 dark:bg-neutral-950 relative isolate min-h-screen flex flex-col justify-end items-start antialiased dark:text-neutral-100">
+      <div className="pointer-events-auto absolute inset-0 -z-10 overflow-visible">
+        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 left-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
+        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 left-1/2 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0"></div>
+        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 left-0 from-orange-300 via-red-200 to-rose-100 opacity-60 blur-3xl dark:from-orange-600 dark:via-amber-500 dark:to-rose-400 dark:opacity-64"></div>
       </div>
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-        <div className="h-[60vh] w-[60vh] rounded-full bg-gradient-to-br absolute -top-28 -left-28 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
-        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-160 right-10 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0"></div>
-        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute top-28 left-1/4 from-purple-300 via-amber-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64"></div>
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-visible">
+        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 right-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
+        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 right-1/2 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0"></div>
+        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 right-0 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64"></div>
       </div>
-      <header className="w-full z-20 transition-colors duration-150">
+      <header className="w-full z-20 transition-colors duration-150 fixed top-0 left-0 bg-white/70 dark:bg-neutral-950/7₀ backdrop-blur-sm border-b border-zinc-3₀/7₀ dark:border-white/2₀">
         <div className="mx-auto px-6 max-w-5xl transition-all duration-300">
           <div className="items-center justify-between py-3 lg:gap-0 lg:py-4 relative flex flex-wrap gap-6">
             <div className="w-full items-center justify-between lg:w-auto flex gap-12">
@@ -89,23 +89,30 @@ export default function Hero() {
         </div>
       </header>
 
-      <main className="overflow-hidden">
+      <main className="overflow-hidden w-full min-h-full">
         <section>
-          <div className="pt-8 relative">
-            <div className="w-full h-full absolute inset-0 -z-10 bg-gradient-radial from-transparent to-white dark:to-neutral-950"></div>
+          <div className="mx-auto px-6 pb-16">
+            <h1 className="mt-0 text-[9em] leading-none tracking-tight items-left">
+              Emmanuel<br />
+              <em>Jaimes</em>
+            </h1>
+            <p className="absolute left-0 mt-4 text-lg text-gray-700/80 dark:text-neutral-300/80">Software Engineer</p>
+            <p className="absolute left-40 mt-2 ml-2 text-lg text-gray-700/80 dark:text-neutral-300/80">Chicago</p>
+            
+            {/* <div className="w-full h-full absolute inset-0 -z-10 bg-gradient-radial from-transparent to-white dark:to-neutral-950"></div> */}
             <div className="mx-auto px-6 max-w-5xl">
-              <div className="sm:mx-auto lg:mr-auto lg:mt-0">
+              {/* <div className="sm:mx-auto lg:mr-auto lg:mt-0">
                 <p className="mt-8 text-5xl font-medium md:text-6xl lg:mt-16 max-w-2xl text-balance">Emmanuel Jaimes</p>
-                {/* <div className="mt-11 items-center flex gap-2">
+                <div className="mt-11 items-center flex gap-2">
                   <div className="bg-gray-800/10 dark:bg-neutral-100/10 rounded-xl border border-zinc-300/70 dark:border-black/20 p-0.5">
                     <button className="inline-flex border border-transparent transition-colors hover:bg-neutral-700 dark:hover:bg-indigo-500 items-center justify-center rounded-xl bg-neutral-900 px-5 py-3 font-medium text-neutral-100 dark:bg-indigo-600 text-base">Join Nebula</button>
                   </div>
                   <button className="inline-flex border border-transparent transition-colors hover:bg-black/5 dark:hover:bg-white/10 items-center justify-center rounded-xl bg-transparent px-5 py-3 font-medium text-base">Request a demo</button>
-                </div> */}
+                </div>
                 <p className="mt-8 text-lg text-gray-700/80 max-w-2xl text-pretty dark:text-neutral-300/80">Software Engineer</p>
                 <p className="mt-8 ml-2 text-lg text-gray-700/80 max-w-2xl text-pretty dark:text-neutral-300/80">Chicago</p>
                 
-                {/* <div className="items-center flex mt-4">
+                <div className="items-center flex mt-4">
                   <img alt="" src="https://devwares-pull-zone.b-cdn.net/mockimages/John%20Carter%20-%20Cirlce%20Small.png" className="object-cover object-right h-8 w-8 rounded-full" />
                   <img alt="" src="https://devwares-pull-zone.b-cdn.net/mockimages/Sophie%20Moore%20-%20Circle%20Small.png" className="-ml-2 object-cover h-8 w-8 rounded-full" />
                   <img alt="" src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?..." className="-ml-2 object-cover object-top h-8 w-8 rounded-full" />
@@ -113,8 +120,8 @@ export default function Hero() {
                   <div className="ml-4 items-start flex flex-col">
                     <p className="text-base font-medium m-0 dark:text-gray-200 text-gray-900">Trusted by over 500k+ users</p>
                   </div>
-                </div> */}
-              </div>
+                </div>
+              </div> */}
             </div>
             {/* <div className="mt-8 px-2 sm:mr-0 sm:mt-12 md:mt-20 relative -mr-56 overflow-hidden">
               <div aria-hidden className="bg-linear-to-b absolute inset-0 z-10 from-transparent from-35% to-white dark:to-neutral-950"></div>
