@@ -40,21 +40,20 @@ const frameworks2 = [
 
 function About() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 space-y-10">
+    <div className="max-w-3xl mx-auto px-4 py-8 space-y-10 bg-gray-950 text-gray-800 dark:bg-neutral-950 dark:text-neutral-100">
       
-      <Card>
+      {/* <Card>
         <div className="text-white text-center space-y-4">
           <p className="text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
-            Whether it's solving complex problems or crafting beautiful solutions, I bridge curiosity and precision with a hunger to keep learning. <br />
-            Writing lines of code by day, and making <i>mean</i> margaritas by night 🍸
+            Welcome
           </p>
         </div>
-      </Card>
+      </Card> */}
 
       <Card>
         <div className="text-white text-center space-y-2">
-          <p className="text-2xl sm:text-3xl font-semibold">Current Tech Stack</p>
-          <p className="text-sm text-gray-400 italic">Languages, Tools & Frameworks</p>
+          <p className="text-2xl sm:text-3xl font-sans font-extralight">Current Tech Stack</p>
+          <p className="text-sm text-gray-400 font-serif font-stretch-75% italic">Languages, Tools & Frameworks</p>
           <div className='w-full overflow-x-auto'>
               <IconCarousel songs={[...techStack, ...techStack2]} size={72} />
           </div>
@@ -64,7 +63,7 @@ function About() {
         </div>
       </Card>
 
-      <Card>
+      {/* <Card>
         <div className="text-white text-center space-y-4">
           <p className="text-2xl sm:text-3xl font-semibold">Theme Music</p>
           <p className="text-sm text-gray-400 italic">
@@ -74,7 +73,7 @@ function About() {
               <IconCarousel songs={sampleSongs} size={88} />
           </div>
         </div>
-      </Card>
+      </Card> */}
 
     </div>
   );

@@ -1,5 +1,8 @@
 import React from "react";
 import SocialIcon from "./SocialIcon";
+import Experience from "./Experience";
+import About from './About';
+import Projects from "./Projects";
 
 export default function Hero() {
   const navLinks = [
@@ -8,6 +11,12 @@ export default function Hero() {
     { href: '#experience', text: 'Experience' },
     { href: '#connect', text: 'Connect' },
   ];
+
+  const sections = {
+    Projects: <Projects/>,
+    About: <About/>,
+    Experience: <Experience/>,
+  }
 
   const logos = [
     { alt: 'LinkedIn Logo', src: 'public/Linkedin.svg', className: 'h-6 w-fit' },
@@ -18,7 +27,7 @@ export default function Hero() {
   ];
 
   return (
-    <div className="bg-white text-gray-800 dark:bg-neutral-950 relative isolate min-h-screen flex flex-col justify-end items-start antialiased dark:text-neutral-100">
+    <div className="bg-gray-950 dark:bg-neutral-950 relative isolate z-999 h-screen flex flex-col justify-end items-start antialiased text-white text-decoration-none pb-16">
       <div className="pointer-events-auto absolute inset-0 -z-10 overflow-visible">
         <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 left-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
         <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 left-1/2 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0"></div>
@@ -29,21 +38,28 @@ export default function Hero() {
         <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 right-1/2 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0"></div>
         <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 right-0 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64"></div>
       </div>
-      <header className="w-full z-20 transition-colors duration-150 fixed top-0 left-0 bg-white/70 dark:bg-neutral-950/7₀ backdrop-blur-sm border-b border-zinc-3₀/7₀ dark:border-white/2₀">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-visible">
+        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute top-20 right-1/2 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
+        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute top-20 right-0 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0"></div>
+        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute top-20 right-20 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64"></div>
+      </div>
+      <header className="w-full z-20 transition-colors duration-150 fixed top-0 left-0 bg-neutral-950/7₀ backdrop-blur-sm border-b border-zinc-3₀/7₀ dark:border-white/2₀">
         <div className="mx-auto px-6 max-w-5xl transition-all duration-300">
           <div className="items-center justify-between py-3 lg:gap-0 lg:py-4 relative flex flex-wrap gap-6">
             <div className="w-full items-center justify-between lg:w-auto flex gap-12">
-              <p className="font-semibold tracking-wide">EJ</p>
+              <p className="font-semibold tracking-wide text-white">EJ</p>
               <button type="button" className="relative z-20 -m-2.5 -mr-4 block cursor-pointer p-2.5 lg:hidden">
                 <svg className="w-6 h-6 m-auto duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
               </button>
-              <div className="lg:block hidden">
-                <ul className="text-sm flex gap-8">
+              {/* CHECK CLASSNAMES HERE FOR TEXT DECORATION  */}
+              {/* CHECK FUNCTIONALITY SECTIONS NAVLINKS */}
+              <div className="lg:block hidden text-white hover:text-neutral-100 text-decoration-none">
+                <ul className="text-sm flex gap-8 text-white hover:text-neutral-100 text-decoration-none">
                   {navLinks.map((link, idx) => (
-                    <li key={idx}>
-                      <a href={link.href} className="text-gray-700/80 dark:text-neutral-300/80 hover:text-gray-800 dark:hover:text-neutral-100 block duration-150">
+                    <li key={idx} className="text-white hover:text-neutral-100 text-decoration-none">
+                      <a href={link.href} className="block duration-150 text-white hover:text-neutral-100 text-decoration-none">
                         {link.text}
                       </a>
                     </li>
@@ -54,7 +70,7 @@ export default function Hero() {
             <div className="lg:flex lg:w-fit lg:gap-6 lg:space-y-0 hidden">
               <div className="w-full sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit flex flex-col space-y-3">
                 {/* icons go here */}
-                <div className="grid grid-cols-2 md:flex justify-center md:justify-end gap-6">
+                <div className="grid grid-cols-2 md:flex justify-center md:justify-end gap-6 ">
                   <SocialIcon
                     href="https://www.linkedin.com/in/jaimes-emmanuel"
                     src="/Linkedin.svg"
@@ -88,70 +104,20 @@ export default function Hero() {
           </div>
         </div>
       </header>
-
-      <main className="overflow-hidden w-full min-h-full">
-        <section>
-          <div className="mx-auto px-6 pb-16">
-            <h1 className="mt-0 text-[9em] leading-none tracking-tight items-left">
+      {/* text */}
+      <main className="overflow-hidden w-full flex flex-col justify-end flex-1">
+        <section className="w-full">
+          <div className="px-8 pb-12 text-gray-300">
+            <h1 id='hero-text-lg' className="mt-0 text-[10vw] leading-none tracking-tight items-left">
               Emmanuel<br />
               <em>Jaimes</em>
             </h1>
-            <p className="absolute left-0 mt-4 text-lg text-gray-700/80 dark:text-neutral-300/80">Software Engineer</p>
-            <p className="absolute left-40 mt-2 ml-2 text-lg text-gray-700/80 dark:text-neutral-300/80">Chicago</p>
+            <p className="left-0 mt-4 text-lg text-gray-700/80 font-serif dark:text-neutral-300/80">Software Engineer</p>
+            <p className="left-40 mt-2 ml-2 text-lg text-gray-700/80 font-serif dark:text-neutral-300/80">Chicago</p>
             
-            {/* <div className="w-full h-full absolute inset-0 -z-10 bg-gradient-radial from-transparent to-white dark:to-neutral-950"></div> */}
-            <div className="mx-auto px-6 max-w-5xl">
-              {/* <div className="sm:mx-auto lg:mr-auto lg:mt-0">
-                <p className="mt-8 text-5xl font-medium md:text-6xl lg:mt-16 max-w-2xl text-balance">Emmanuel Jaimes</p>
-                <div className="mt-11 items-center flex gap-2">
-                  <div className="bg-gray-800/10 dark:bg-neutral-100/10 rounded-xl border border-zinc-300/70 dark:border-black/20 p-0.5">
-                    <button className="inline-flex border border-transparent transition-colors hover:bg-neutral-700 dark:hover:bg-indigo-500 items-center justify-center rounded-xl bg-neutral-900 px-5 py-3 font-medium text-neutral-100 dark:bg-indigo-600 text-base">Join Nebula</button>
-                  </div>
-                  <button className="inline-flex border border-transparent transition-colors hover:bg-black/5 dark:hover:bg-white/10 items-center justify-center rounded-xl bg-transparent px-5 py-3 font-medium text-base">Request a demo</button>
-                </div>
-                <p className="mt-8 text-lg text-gray-700/80 max-w-2xl text-pretty dark:text-neutral-300/80">Software Engineer</p>
-                <p className="mt-8 ml-2 text-lg text-gray-700/80 max-w-2xl text-pretty dark:text-neutral-300/80">Chicago</p>
-                
-                <div className="items-center flex mt-4">
-                  <img alt="" src="https://devwares-pull-zone.b-cdn.net/mockimages/John%20Carter%20-%20Cirlce%20Small.png" className="object-cover object-right h-8 w-8 rounded-full" />
-                  <img alt="" src="https://devwares-pull-zone.b-cdn.net/mockimages/Sophie%20Moore%20-%20Circle%20Small.png" className="-ml-2 object-cover h-8 w-8 rounded-full" />
-                  <img alt="" src="https://images.unsplash.com/photo-1506863530036-1efeddceb993?..." className="-ml-2 object-cover object-top h-8 w-8 rounded-full" />
-                  <img alt="" src="https://assets.website-files.com/.../Image-4.jpg" className="-ml-2 object-cover h-8 w-8 rounded-full" />
-                  <div className="ml-4 items-start flex flex-col">
-                    <p className="text-base font-medium m-0 dark:text-gray-200 text-gray-900">Trusted by over 500k+ users</p>
-                  </div>
-                </div>
-              </div> */}
-            </div>
-            {/* <div className="mt-8 px-2 sm:mr-0 sm:mt-12 md:mt-20 relative -mr-56 overflow-hidden">
-              <div aria-hidden className="bg-linear-to-b absolute inset-0 z-10 from-transparent from-35% to-white dark:to-neutral-950"></div>
-              <div className="mx-auto rounded-2xl bg-white dark:bg-neutral-950 shadow-lg relative max-w-5xl overflow-hidden border border-black/10 dark:border-white/15 p-4 ring-1 ring-white dark:ring-neutral-950">
-                <img alt="app screen" src="https://devwares-pull-zone.b-cdn.net/mockimages/ChatGPT%20Image%20May%209%2C%202025%2C%2002_54_42%20AM.png" className="relative hidden dark:block rounded-2xl" />
-                <img alt="app screen" src="https://devwares-pull-zone.b-cdn.net/mockimages/ChatGPT%20Image%20May%209%2C%202025%2C%2001_49_56%20AM.png" className="relative border border-black/10 dark:hidden rounded-2xl" />
-              </div>
-            </div> */}
           </div>
         </section>
 
-        {/* <section className="bg-white dark:bg-neutral-950 pb-16 pt-16 md:pb-32">
-          <div className="px-6 group relative m-auto max-w-5xl">
-            <div className="items-center justify-center absolute inset-0 z-10 flex scale-95 opacity-0 duration-500 group-hover:scale-100 group-hover:opacity-100">
-              <a href="/" className="text-sm text-gray-700/80 block duration-150 hover:opacity-75 dark:text-neutral-300/80">
-                You are in good hands
-                <svg className="ml-1 w-3 h-3 inline-block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-                </svg>
-              </a>
-            </div>
-            <div className="mx-auto mt-12 sm:gap-x-16 sm:gap-y-14 group-hover:blur-sm grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50">
-              {logos.map((logo, index) => (
-                <div key={index} className="flex">
-                  <img alt={logo.alt} src={logo.src} className={"dark:invert brightness-0 mx-auto " + logo.className} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section> */}
       </main>
     </div>
   );

@@ -16,7 +16,7 @@ function DateCard({
         relative
         bg-white/10
         backdrop-blur-sm
-        p-6
+        p-10
         rounded-2xl
         shadow-md
         text-white
@@ -30,12 +30,12 @@ function DateCard({
       `}
     >
       {/* Year */}
-      <div className="text-xl text-gray-300 italic mb-2">
+      <div className="text-xl text-gray-300 font-serif font-extralight italic mb-2">
         {year}
       </div>
 
       {/* Header */}
-      <div className="flex items-center gap-3 mb-2 justify-center">
+      <div className="flex items-center gap-3 mb-2 pb-2 justify-center">
         {logo && (
           <img
             src={logo}
@@ -43,18 +43,18 @@ function DateCard({
             className="w-14 h-14 object-contain rounded"
           />
         )}
-        <h3 className="text-lg font-medium text-gray-300">
+        <h3 className="text-lg font-bold text-gray-300">
           {company}
         </h3>
       </div>
 
       {/* Role */}
-      <p className="text-lg font-bold">
+      <p className="text-lg font-sans font-light">
         {title}
       </p>
 
       {/* Location */}
-      <p className="italic text-gray-300">
+      <p className="italic font-serif font-stretch-75% text-gray-300">
         {location}
       </p>
     </div>

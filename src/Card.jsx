@@ -11,19 +11,18 @@ function Card({
   return (
     <div
       className={`
-        relative z-10
-        bg-black
+        relative z-1
+        bg-white/10
+        dark:bg-neutral-950
+       text-neutral-100
         backdrop-blur-sm
         p-5 sm:p-6 lg:p-8
         rounded-xl
         shadow-md
-        text-white
         text-center
         transition-all
         duration-300
         ease-out
-        
-        /* Mobile Touch Feedback */
         active:scale-[0.98] md:active:scale-100 
         
         /* Desktop-Only Hover Effects */
@@ -32,13 +31,13 @@ function Card({
       `}
     >
       {title && (
-        <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-2">
+        <h2 className="text-xl sm:text-2xl font-extralight font-sans tracking-tight mb-2">
           {title}
         </h2>
       )}
 
       {description && (
-        <p className="mb-4 text-sm sm:text-base text-gray-400 leading-relaxed px-2">
+        <p className="mb-4 text-sm sm:text-base font-serif font-thin font-stretch-50% text-gray-400 leading-relaxed px-2">
           {description}
         </p>
       )}

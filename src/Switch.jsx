@@ -15,7 +15,7 @@ function Switch() {
   const [activeTab, setActiveTab] = useState("About");
 
   return (
-    <div className="">
+    <div className="bg-gray-400 text-gray-950 dark:bg-neutral-950 relative isolate antialiased dark:text-neutral-100">
       {/* min-h-screen w-full bg-black flex flex-col items-center pt-10 transition-all duration-500 px-4 */}
       {/* nav menu */}
       <div className="flex flex-wrap justify-center gap-4 mb-8">

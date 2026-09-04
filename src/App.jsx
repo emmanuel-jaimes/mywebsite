@@ -5,12 +5,18 @@ import './App.css'
 import Hero from './Hero'
 import Switch from './Switch'
 import { Analytics } from '@vercel/analytics/react'
+import About from './About'
+import Projects from './Projects'
+import Experience from './Experience'
 function App() {
 
   return (
     <div>
       <Hero/>
-      <Switch/>
+      {/* <Switch/> */}
+      <About/>
+      <Projects/>
+      <Experience/>
       <Analytics mode='production'/>
     </div>
   )

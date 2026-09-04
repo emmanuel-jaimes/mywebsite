@@ -43,16 +43,16 @@ function Experience() {
   return (
     <div className="relative max-w-3xl mx-auto px-4 py-8">
       {/* Timeline line */}
-      <div className="absolute left-1/2 transform -translate-x-1/2 top-6 bottom-24 w-1 bg-white/40 rounded-full" />
+      {/* <div className="absolute left-1/2 transform -translate-x-1/2 top-6 bottom-24 w-1 bg-white/40 rounded-full" /> */}
 
       <div className="flex flex-col gap-12">
         {experiences.map((exp, idx) => {
-          const isLeft = idx % 2 === 0;
+          const isLeft = idx === idx;
 
           return (
             <div
               key={idx}
-              className="grid lg:grid-cols-[1fr_40px_1fr] items-start relative"
+              className="grid lg:grid-cols-[1fr_20px_1fr] items-start relative"
             >
               {/* Left */}
               <div className="flex justify-end">
@@ -65,21 +65,6 @@ function Experience() {
                 )}
               </div>
 
-              {/* Marker */}
-              <div className="flex justify-center items-start relative z-10">
-                <div className="w-3 h-3 bg-blue-500 rounded-full mt-4" />
-              </div>
-
-              {/* Right */}
-              <div className="flex justify-end">
-                {!isLeft && (
-                  <DateCard
-                    {...exp}
-                    align="right"
-                    hoverClass="hover:bg-purple-500/20"
-                  />
-                )}
-              </div>
             </div>
           );
         })}
