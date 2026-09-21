@@ -16,7 +16,7 @@ function App() {
       {/* <Switch/> */}
       <About/>
       <Projects/>
-      <Experience/>
+      {/* <Experience/> */}
       <Analytics mode='production'/>
     </div>
   )

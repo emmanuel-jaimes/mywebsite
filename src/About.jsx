@@ -38,9 +38,15 @@ const frameworks2 = [
   { albumArt: "/qt.svg", description: "QT" },
 ];
 
+// const aboutRef = useRef(null);
+// React.useEffect(() => {
+//   aboutRef.current.scrollIntoView({ behavior: 'smooth' });
+// }, []);
+
+
 function About() {
   return (
-    <div className="max-w-3xl mx-auto px-4 py-8 space-y-10 bg-gray-950 text-gray-800 dark:bg-neutral-950 dark:text-neutral-100">
+    <div id="About" className="max-w-3xl mx-auto px-4 py-8 space-y-10 bg-gray-950 text-gray-800 dark:bg-neutral-950 dark:text-neutral-100">
       
       {/* <Card>
         <div className="text-white text-center space-y-4">

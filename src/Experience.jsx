@@ -30,13 +30,6 @@ const experiences = [
     location: "Dubuque, IA",
     logo: "/John Deere_idueR-FERQ_0.svg",
   },
-  {
-    year: "19' - 24'",
-    company: "Various Establishments",
-    title: "Craft Cocktail Bartender",
-    location: "Dallas, TX",
-    logo: "/martini-glass.png",
-  },
 ];
 
 function Experience() {

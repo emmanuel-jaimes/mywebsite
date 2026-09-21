@@ -29,19 +29,24 @@ export default function Hero() {
   return (
     <div className="bg-gray-950 dark:bg-neutral-950 relative isolate z-999 h-screen flex flex-col justify-end items-start antialiased text-white text-decoration-none pb-16">
       <div className="pointer-events-auto absolute inset-0 -z-10 overflow-visible">
-        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 left-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
-        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 left-1/2 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0"></div>
-        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 left-0 from-orange-300 via-red-200 to-rose-100 opacity-60 blur-3xl dark:from-orange-600 dark:via-amber-500 dark:to-rose-400 dark:opacity-64"></div>
+        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 left-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0 animate-drift-x [--drift:25vw] [animation-duration:14s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 left-1/2 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0 animate-drift-x [--drift:-30vw] [animation-duration:18s] [animation-delay:-6s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 left-0 from-orange-300 via-red-200 to-rose-100 opacity-60 blur-3xl dark:from-orange-600 dark:via-amber-500 dark:to-rose-400 dark:opacity-64 animate-drift-x [--drift:20vw] [animation-duration:22s] [animation-delay:-11s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
       </div>
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-visible">
-        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 right-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
-        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 right-1/2 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0"></div>
-        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 right-0 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64"></div>
+        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 right-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0 animate-drift-x [--drift:25vw] [animation-duration:14s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 right-1/2 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0 animate-drift-x [--drift:-30vw] [animation-duration:18s] [animation-delay:-6s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 right-0 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64 animate-drift-x [--drift:20vw] [animation-duration:22s] [animation-delay:-11s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
       </div>
       <div className="pointer-events-none absolute inset-0 -z-10 overflow-visible">
-        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute top-20 right-1/2 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0"></div>
-        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute top-20 right-0 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0"></div>
-        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute top-20 right-20 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64"></div>
+        <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute top-20 right-1/2 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0 animate-drift-x [--drift:25vw] [animation-duration:14s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute top-20 right-0 from-fuchsia-300 via-purple-300 to-purple-200 opacity-40 blur-3xl dark:opacity-0 animate-drift-x [--drift:-30vw] [animation-duration:18s] [animation-delay:-6s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute top-20 right-20 from-purple-300 via-red-200 to-pink-100 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64 animate-drift-x [--drift:20vw] [animation-duration:22s] [animation-delay:-11s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+      </div>
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-visible">
+        <div className="h-[20vh] w-[25vh] rounded-full bg-gradient-to-tr absolute top-1/4 left-20 from-fuchsia-500 via-purple-500 to-purple-500 opacity-40 blur-3xl dark:opacity-0 animate-drift-x [--drift:-30vw] [animation-duration:18s] [animation-delay:-6s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[15vh] w-[25vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute top-1/4 left-20 from-purple-500 via-red-500 to-pink-500 opacity-60 blur-3xl dark:from-purple-600 dark:via-amber-500 dark:to-purple-400 dark:opacity-64 animate-drift-x [--drift:20vw] [animation-duration:22s] [animation-delay:-11s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+        <div className="h-[25vh] w-[25vh] rounded-full bg-gradient-to-br absolute top-1/4 left-1/2 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0 animate-drift-x [--drift:25vw] [animation-duration:14s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
       </div>
       <header className="w-full z-20 transition-colors duration-150 fixed top-0 left-0 bg-neutral-950/7₀ backdrop-blur-sm border-b border-zinc-3₀/7₀ dark:border-white/2₀">
         <div className="mx-auto px-6 max-w-5xl transition-all duration-300">
@@ -55,7 +60,7 @@ export default function Hero() {
               </button>
               {/* CHECK CLASSNAMES HERE FOR TEXT DECORATION  */}
               {/* CHECK FUNCTIONALITY SECTIONS NAVLINKS */}
-              <div className="lg:block hidden text-white hover:text-neutral-100 text-decoration-none">
+              {/* <div className="lg:block hidden text-white hover:text-neutral-100 text-decoration-none">
                 <ul className="text-sm flex gap-8 text-white hover:text-neutral-100 text-decoration-none">
                   {navLinks.map((link, idx) => (
                     <li key={idx} className="text-white hover:text-neutral-100 text-decoration-none">
@@ -65,7 +70,15 @@ export default function Hero() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
+
+                {/* <button
+                  className="inline-block px-4 py-2 text-sm leading-none text-white font-medium rounded-md hover:bg-neutral-200 transition duration-150 ease-in-out sm:text-base sm:py-1"
+                  onClick={() => aboutRef.current.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Go to About
+                </button> */}
+
             </div>
             <div className="lg:flex lg:w-fit lg:gap-6 lg:space-y-0 hidden">
               <div className="w-full sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit flex flex-col space-y-3">
