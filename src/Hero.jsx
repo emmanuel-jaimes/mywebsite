@@ -3,6 +3,7 @@ import SocialIcon from "./SocialIcon";
 import Experience from "./Experience";
 import About from './About';
 import Projects from "./Projects";
+import { motion } from "motion/react";
 
 export default function Hero() {
   const navLinks = [
@@ -28,6 +29,17 @@ export default function Hero() {
 
   return (
     <div className="bg-gray-950 dark:bg-neutral-950 relative isolate z-999 h-screen flex flex-col justify-end items-start antialiased text-white text-decoration-none pb-16">
+      
+      <div>
+        <motion className="" animate={{x:100, y:-50}} transition={{duration:1}} >
+          <div className="pointer-events-auto absolute inset-0 -z-10 overflow-visible">
+          <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 left-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0 animate-drift-x [--drift:25vw] [animation-duration:14s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+          <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 left-1/2 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0 animate-drift-x [--drift:-30vw] [animation-duration:18s] [animation-delay:-6s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+          <div className="h-[35vh] w-[45vh] rounded-full bg-gradient-to-b dark:h-[28vh] absolute bottom-20 left-0 from-orange-300 via-red-200 to-rose-100 opacity-60 blur-3xl dark:from-orange-600 dark:via-amber-500 dark:to-rose-400 dark:opacity-64 animate-drift-x [--drift:20vw] [animation-duration:22s] [animation-delay:-11s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
+          </div>  
+        </motion>
+      </div>
+      
       <div className="pointer-events-auto absolute inset-0 -z-10 overflow-visible">
         <div className="h-[50vh] w-[50vh] rounded-full bg-gradient-to-br absolute bottom-20 left-0 from-indigo-200 via-lime-200 to-purple-300 opacity-20 blur-2xl dark:opacity-0 animate-drift-x [--drift:25vw] [animation-duration:14s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
         <div className="h-[40vh] w-[50vh] rounded-full bg-gradient-to-tr absolute bottom-20 left-1/2 from-fuchsia-300 via-orange-300 to-rose-200 opacity-40 blur-3xl dark:opacity-0 animate-drift-x [--drift:-30vw] [animation-duration:18s] [animation-delay:-6s] mix-blend-screen will-change-transform motion-reduce:animate-none"></div>
